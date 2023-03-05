@@ -1,0 +1,11 @@
+{% set rootPath = "./img/" %}
+{% set sizes = [1024, 768, 576, 0] %}
+{% set suffixes = ['md', 'sm', 'xs', 'xxs'] %}
+
+<picture>
+  {% for id, size in sizes %}
+    <source srcset="{{ rootPath ~ src }}-{{ suffixes[id] }}@1x.webp 1x, {{ rootPath ~ src }}-{{ suffixes[id] }}@1x.webp 2x" type="image/webp" {% if size > 0 %} media="(min-width: {{size}}px)"{% endif %}>
+    <source srcset="{{ rootPath ~ src }}-{{ suffixes[id] }}@1x.{{ type_default }} 1x, {{ rootPath ~ src }}-{{ suffixes[id] }}@2x.{{ type_default }} 2x" type="image/{{ type_default }}"{% if size > 0 %} media="(min-width: {{size}}px)"{% endif %}>
+  {% endfor %}
+  <img src="{{ rootPath ~ src }}test-image-md.{{ type_default }}" srcset="{{ rootPath ~ src }}test-image-md@1x.{{ type_default }} 1x, {{ rootPath ~ src }}@2x.{{ type_default }} 2x" alt="{{alt}}">
+</picture>

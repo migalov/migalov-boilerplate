@@ -1,0 +1,73 @@
+{
+  "name": "Gulp Twig Starter",
+  "version": "2.0",
+  "description": "Borrowed assembly for creating web pages or letter templates",
+  "main": "index.js",
+  "author": "Michel Migalov",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production",
+    "clear": "gulp clear"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
+    "browser-sync": "^2.27.7",
+    "cz-customizable": "^7.0.0",
+    "del": "^6.0.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-inline-css": "^4.0.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-size": "^4.0.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp-webp-html": "^1.0.2",
+    "inline-css": "^3.0.0",
+    "require-dir": "^1.2.0",
+    "sass": "^1.49.9",
+    "webpack": "^5.70.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
