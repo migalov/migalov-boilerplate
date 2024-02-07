@@ -1,34 +1,2309 @@
+
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<html lang="ru" prefix="og: http://ogp.me/ns#">
 
-        <!-- SEO tags -->
-        <title>Gulp Twig Starter</title>
-        <meta content="" name="description">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <meta content="" property="og:title">
-        <meta content="" property="og:image">
-        <meta content="" property="og:type">
-        <meta content="" property="og:url">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css"
+        href="./css/icomoon/icomoon.css?v=5.1.0.9" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fineartbox.ru//css/5.1.0.9/8b2f170d4c16a622f1dd713e49c66d0c.css" />
+    <script type="text/javascript" src="https://fineartbox.ru/assets/5a949f53/jquery.min.js"></script>
+    <script type="application/ld+json">
+/*<![CDATA[*/
+{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/fineartbox.ru","name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","url":"https:\/\/fineartbox.ru"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/fineartbox.ru\/empty-page","name":"\u041f\u0443\u0441\u0442\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430","url":"https:\/\/fineartbox.ru\/empty-page"}}]}
+/*]]>*/
+</script>
+    <title>Пустая страница</title>
+    <link rel="canonical" href="https://fineartbox.ru/empty-page" />
+    <meta name="robots" content="noindex,nofollow">
+    <script type="application/ld+json">
+    {"@context":"https:\/\/schema.org","@type":"Organization","name":"Fineartbox","legalName":"Fineartbox","url":"https:\/\/fineartbox.ru","logo":"https:\/\/fineartbox.ru\/logo.svg","foundingDate":"","address":{"@type":"PostalAddress","streetAddress":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, 125252, \u0443\u043b. \u0417\u043e\u0440\u0433\u0435 \u0434.15, \u043a\u043e\u0440\u043f. 1, \u043e\u0444\u0438\u0441 404"},"contactPoint":{"@type":"ContactPoint","contactType":"Customer Service","telephone":"+7 (495) 215-09-77","email":"sale@fineartbox.ru"},"sameAs":["https:\/\/facebook.com\/fineARTbox","https:\/\/instagram.com\/fineartbox","https:\/\/t.me\/fineartbox"]}</script>
 
-        <!-- GENERATE FAVICON: https://realfavicongenerator.net/ -->
-        <link href="/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="76x76">
-        <link href="/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-        <link href="/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-        <link href="/img/favicons/site.webmanifest" rel="manifest">
-        <link color="#000000" href="/img/favicons/safari-pinned-tab.svg" rel="mask-icon">
-        <link href="/img/favicons/favicon.ico" rel="shortcut icon">
-        <meta content="#000000" name="msapplication-TileColor">
-        <meta content="/img/favicons/browserconfig.xml" name="msapplication-config">
-        <meta content="#000000" name="theme-color">
+    <script type="text/javascript">
+        window.isMobile = false;
+        var yupeTokenName = 'YUPE_TOKEN';
+        var yupeToken = '994c3a2b3fa9b776e2eaad99175f6688e78f9870';
 
-        <!-- Main styles -->
-        <link href="./css/main.css" rel="stylesheet">
-    </head>
+        var cartAddProductUrl = '/cart/add';
+
+        var deliveryCalcUrl = '/cart/CalcDelivery';
+        var deliveryPointsUrl = '/cart/GetDeliveryPoints';
+        var calculationProductUrl = '/productCalculation';
+        var calculationUploadFile = '/uploadFileInCalculation';
+    </script>
+    <style type="text/css">
+        @font-face {
+            font-family: FontMedium;
+            src: url('./fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        @font-face {
+            font-family: FontRegular;
+            src: url('./fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: FontLight;
+            src: url('./fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: OpenSansRegular;
+            src: url('./fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        @font-face {
+            font-family: FontSemiBold;
+            src: url('./fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: OpenSansSemiBold;
+            src: url('./fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        @font-face {
+            font-family: FontBold;
+            src: url('./fonts/Roboto/Roboto-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: OpenSansBold;
+            src: url('./fonts/Roboto/Roboto-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <style type="text/css">
+        :root {
+            --company-color1: #F1592A;
+            --link-color: #004D99;
+        }
+
+        .company-color-text,
+        .company-color-text-hover:hover {
+            color: #F1592A !important;
+        }
+
+        /*
+        * Typographic System
+         */
+        body {
+            font-size: 14px;
+            color: #1A202C;
+            font-family: FontRegular;
+            ;
+        }
+
+        h0,
+        .h0 {
+            font-size: 48px;
+            font-family: FontMedium;
+            line-height: 1.2;
+            ;
+        }
+
+        h1,
+        .h1 {
+            font-size: 24px;
+            font-family: FontMedium;
+            line-height: 1.2;
+            ;
+        }
+
+        h2,
+        .h2 {
+            font-size: 20px;
+            font-family: FontMedium;
+            line-height: 1.25;
+            ;
+        }
+
+        h3,
+        .h3 {
+            font-size: 24px;
+            font-family: FontSemiBold;
+            line-height: 1.33;
+            ;
+        }
+
+        h4,
+        .h4 {
+            font-size: 20px;
+            font-family: FontSemiBold;
+            line-height: 1.3;
+            ;
+        }
+
+
+        @media (min-width: 768px) {
+
+            h0,
+            .h0 {
+                font-size: 54px;
+            }
+
+            h1,
+            .h1 {
+                font-size: 24px;
+            }
+
+            h2,
+            .h2 {
+                font-size: 22px;
+            }
+
+            h3,
+            .h3 {
+                font-size: 24px;
+            }
+
+            h4,
+            .h4 {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+
+            h0,
+            .h0 {
+                font-size: 64px;
+            }
+
+            h1,
+            .h1 {
+                font-size: 24px;
+            }
+
+            h2,
+            .h2 {
+                font-size: 22px;
+            }
+
+            h3,
+            .h3 {
+                font-size: 24px;
+            }
+
+            h4,
+            .h4 {
+                font-size: 20px;
+            }
+
+            .top-menu-background-color {
+                background: #F1592A;
+            }
+        }
+
+        @media (min-width: 1440px) {
+
+            h0,
+            .h0 {
+                font-size: 64px;
+            }
+
+            h1,
+            .h1 {
+                font-size: 26px;
+            }
+
+            h2,
+            .h2 {
+                font-size: 24px;
+            }
+
+            h3,
+            .h3 {
+                font-size: 22px;
+            }
+
+            h4,
+            .h4 {
+                font-size: 18px;
+            }
+        }
+
+        .block-title {
+            font-size: 12px;
+            font-family: FontSemiBold;
+            line-height: 1.33;
+            ;
+        }
+
+        .text-1 {
+            font-size: 14px;
+            font-family: FontRegular;
+            line-height: 1.375;
+            ;
+        }
+
+        .text-2 {
+            font-size: 14px;
+            font-family: FontSemiBold;
+            line-height: 1.375;
+            ;
+        }
+
+        .text-2-it {
+            font-size: 14px !important;
+            font-family: FontSemiBold !important;
+            ;
+        }
+
+        .text-3 {
+            font-size: 14px;
+            font-family: FontBold;
+            ;
+        }
+
+        .small-text {
+            font-size: 14px;
+            font-family: FontMedium;
+            line-height: 1.42;
+            ;
+        }
+
+        .small-text-it {
+            font-size: 14px !important;
+            font-family: FontMedium !important;
+            ;
+        }
+
+        .extra-small-text {
+            font-size: 12px;
+            font-family: FontMedium;
+        }
+
+        .signature,
+        .alert-signature {
+            font-size: 14px;
+            font-family: FontMedium;
+            ;
+        }
+
+        a,
+        .btn-link,
+        .link,
+        .catalog-filter-reset {
+            font-size: 14px;
+            color: #004D99;
+            font-family: FontRegular;
+            ;
+        }
+
+        .catalog-filter-reset {
+            color: #004D99 !important;
+        }
+
+        a:hover,
+        .btn-link:hover,
+        .link:hover {
+            color: #004D99;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .currency-icon {
+            font-size: 21px;
+        }
+
+        /* Color shades */
+        .text-gray-100 {
+            color: #f8f9fb !important;
+        }
+
+        .text-gray-200 {
+            color: #eef0f5 !important;
+        }
+
+        .text-gray-300 {
+            color: #e1e5ed !important;
+        }
+
+        .text-gray-400 {
+            color: #cbd2e0 !important;
+        }
+
+        .text-gray-500 {
+            color: #98a6c2 !important;
+        }
+
+        .text-gray-600 {
+            color: #6479a4 !important;
+        }
+
+        .text-gray-700 {
+            color: #42516f !important;
+        }
+
+        .text-gray-800 {
+            color: #2b3549 !important;
+        }
+
+        .text-gray-900 {
+            color: #1A202C !important;
+        }
+
+        .text-gray-900-hover:hover {
+            color: #1A202C !important;
+        }
+
+        .btn-gray-200 {
+            background-color: #eef0f5 !important;
+        }
+
+        .btn-gray-300 {
+            background-color: #e1e5ed !important;
+        }
+
+        .btn-gray-500 {
+            background-color: #98a6c2 !important;
+        }
+
+        .highlight-tag {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: 0 !important;
+        }
+
+        .line-through-price:before {
+            border-color: #6479a4 !important;
+        }
+
+        .inherit-text {
+            color: inherit !important;
+        }
+
+        /*
+        * Buttons
+         */
+        .btn {
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background-color: #F1592A;
+            border-color: #F1592A;
+            color: #ffffff;
+        }
+
+        .photos-list-previews .active {
+            border-color: #F1592A;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .btn-primary:hover {
+            background-color: #e3410f;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled):active,
+        .btn-primary:focus {
+            background-color: #c2370d;
+        }
+
+        .btn-outline-primary {
+            border-color: #F1592A;
+            color: #F1592A;
+        }
+
+        .btn-outline-primary:hover {
+            border-color: #e3410f;
+            color: #e3410f;
+        }
+
+        .btn-outline-primary:not(:disabled):not(.disabled):active {
+            border-color: #c2370d;
+            color: #c2370d;
+        }
+
+
+        /*
+        * Form
+         */
+        .error .errorMessage,
+        .errorMessage {
+            font-size: 14px;
+            font-family: FontMedium;
+        }
+
+        .success .form-control {
+            border-color: #F1592A;
+        }
+
+        .bootstrap-select .dropdown-item.active {
+            color: #F1592A;
+        }
+
+        .bootstrap-select .dropdown-item:hover {
+            background-color: inherit;
+            color: #F1592A;
+        }
+
+
+        /*
+        * Tabs
+         */
+        .nav-tabs .nav-link.active {
+            border-bottom: 2px solid #F1592A;
+        }
+
+        /*
+        * Custom checkbox, radiobutton
+         */
+        .custom-input[type=checkbox]:checked {
+            background-color: #F1592A;
+            border-color: #F1592A;
+        }
+
+        .custom-input[type=radio]:checked {
+            border-color: #F1592A;
+            background-image: url("data:image/svg+xml, %0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Csvg%20width%3D%2710%27%20height%3D%2710%27%20viewBox%3D%270%200%2010%2010%27%20fill%3D%27none%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%2710%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27%23F1592A%27%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E");
+        }
+
+        .custom-label-block.active,
+        .custom-input[type=checkbox]:checked+label {
+            border: 2px solid #F1592A;
+        }
+
+        .modal-update-delivery .addresses-block input:checked+label {
+            background: #EDF2F7;
+            color: #F1592A;
+        }
+
+        .border-company-color:hover {
+            border-color: #F1592A;
+        }
+
+        .border-company-color-it:hover {
+            border-color: #F1592A !important;
+        }
+
+
+        /*
+        * Catalog filter color
+         */
+        .catalog-filter-param.checked .catalog-filter-color {
+            border: 2px solid #F1592A;
+        }
+
+        /*
+        * Filter tags
+         */
+        .filter-tags a {
+            display: block;
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: #4A5568;
+            background-color: #EDF2F7;
+            font-family: FontMedium;
+            border: 0;
+        }
+
+        .filter-tags a:hover {
+            color: #2D3748;
+            background-color: #E2E8F0;
+            text-decoration: none;
+        }
+
+        .filter-tags a.active {
+            color: #F2F2F2;
+            background-color: #4A5568;
+        }
+
+        .filter-tags a.active:hover {
+            background-color: #2D3748;
+        }
+
+
+
+        /*
+        * Souvenir Widget
+        */
+        .widget-category-menu .category-link.active a {
+            color: #F1592A !important;
+        }
+
+        /*
+        * Cart
+         */
+        .recipient-select input:checked+label {
+            color: #F1592A;
+        }
+
+        /**
+         * Footer
+         */
+
+        .footer {
+            background-color: #F5F5F5;
+        }
+
+        .footer,
+        .footer ul li a,
+        .footer .footer__title a,
+        .footer .footer__title .signature,
+        .footer .footer-item,
+        .footer__address a,
+        .footer__mail a,
+        .social-image a {
+            color: #1C1C1C !important;
+        }
+
+        .footer ul li a:hover,
+        .footer__address a:hover,
+        .footer__mail a:hover,
+        .social-image a:hover {
+            color: #353535 !important;
+            text-decoration: none;
+        }
+
+        .footer ul li a:active,
+        .footer__address a:active,
+        .footer__mail a:active,
+        .social-image a:active {
+            color: #4f4f4f !important;
+            text-decoration: none;
+        }
+
+        .bg-company-color {
+            background-color: #F1592A;
+            color: #ffffff;
+        }
+
+        .bg-company-color-text {
+            color: #ffffff;
+        }
+
+        /**
+        * Header
+         */
+        .header-search-result .result-item:hover {
+            color: #F1592A;
+        }
+
+        .modal-change-city-location .select-city:hover {
+            color: #F1592A;
+        }
+
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #ffffff;
+            border-color: #F1592A;
+            background-color: #F1592A;
+        }
+
+        .custom-switch .custom-control-input:checked~.custom-control-label::after {
+            background-color: #ffffff;
+        }
+
+        /**
+         * Cart Page
+         */
+
+        .cart-change-radio-block .payment-method label.checked,
+        .cart-change-radio-block .cart-payers-block label.checked,
+        .cart-change-radio-block .select-user-for-send label.checked,
+        .delivery-row-type-2 .points-block input:checked+label,
+        .delivery-points-list input:checked+label .delivery-point-address,
+        .cart-change-radio-block.cart-address-block .rich-radio label.checked {
+            color: #F1592A;
+        }
+
+        .calc-delivery-variants .delivery-block.active,
+        .branch-company-points .points-block.active {
+            border: 2px solid #F1592A !important;
+        }
+
+        /**
+         * Instructions Page
+         */
+
+        .template-block__icon {
+            color: #F1592A;
+        }
+
+        /**
+        * Menu
+        */
+        @media (min-width: 1025px) {
+            .cd-dropdown-trigger.first-megamenu {
+                background-color: #F1592A;
+                color: white !important;
+            }
+
+        }
+
+        .cd-dropdown-under-child-link:hover .menu-product-name {
+            color: #F1592A !important;
+        }
+
+
+        .templates-container .template-label .small-text.upload-file-block {
+            color: #004D99;
+        }
+
+
+        /*
+        * Calculation
+         */
+        .card-calculation-container .navigation-gallery-item::after {
+            background-color: #F1592A;
+        }
+
+        .card-calculation-container .navigation-gallery-item.slick-current:after {
+            background-color: #F1592A;
+        }
+
+        .calculation-module .background-label.selected {
+            border-color: #F1592A !important;
+        }
+
+        @media (min-width: 768px) {
+
+            .calculation-module .background-label:hover,
+            .calculation-module .bootstrap-select .dropdown-toggle:hover,
+            .custom-label-block:hover {
+                border-color: #F1592A !important;
+            }
+        }
+
+        .production-time-calc-modal .production-time-price.selected {
+            border-color: #F1592A;
+        }
+
+        .souvenir-colors a.active {
+            border: 2px solid #F1592A;
+        }
+
+        .calculation-quantity-container .size-block.active {
+            border: 2px solid #F1592A;
+        }
+
+        .production-time-price.selected,
+        .production-time-price:hover {
+            border-color: #F1592A;
+        }
+
+        /**
+         * Design Page
+         */
+
+        .design-change-constructor {
+            color: #004D99;
+        }
+
+        @media (min-width: 1440px) {
+            .design-change-constructor {
+                color: #1A202C;
+            }
+        }
+
+        /**
+         * Design Widget
+         */
+
+        .select-design-items-block .filter-option-inner-inner {
+            color: #F1592A !important;
+        }
+
+        .select-design-items-block .bootstrap-select .dropdown-toggle::after {
+            border-color: #F1592A !important;
+        }
+
+        /**
+         * Profile
+         */
+        .status-boxes span.active {
+            background-color: #F1592A;
+        }
+
+        .modal-update-delivery .select-background-block.active {
+            border: 2px solid #F1592A;
+        }
+
+        .discount-product-block {
+            background-color: #fde0e7;
+        }
+
+        .discount-product-block .discount-icon span {
+            color: #F22958;
+        }
+
+        .w2p-spinner {
+            border-color: #F1592A;
+        }
+
+        .invoice-sent {
+            border: 17px solid;
+            border-color: #F1592A;
+            background-color: #F1592A;
+            border-radius: 50%;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+
+        .calculation-stepping-icon:hover svg {
+            fill: #F1592A;
+        }
+
+        .projects-item-instance .inner-wrapper {
+            opacity: 0;
+            display: none;
+        }
+
+        .projects-item-instance .inner-wrapper .featured-image {
+            display: none;
+        }
+
+
+        .widget-title {
+            text-align: center !important;
+            justify-content: center !important;
+            margin-bottom: 32px;
+        }
+    </style>
+
+</head>
+
 <body>
-   {% block page %}{% endblock %}
+    <div class="main">
+        <header>
+            <div class="container">
+                <div class="header-inner row pt-2 pb-0 pb-md-2">
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <a href="/" class="header-logo">
+                            <img style="max-height: 70px" class="img-fluid"
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEyXzk3MykiPjxwYXRoIGQ9Ik0wIDB2NjUuOTM0TDE1LjQwMiA3OS42NFYxMy43MTJMMCAweiIgZmlsbD0iI0Q3NjQ0NyIvPjxwYXRoIGQ9Ik0zNC4wOCAxNy4yMjhoLTUuMDV2Mi42OTJoNC41OTN2My41NjRIMjkuMDN2Ni4zNTJoLTQuMTg1VjEzLjY2NGg5LjIzM3YzLjU2NHptNy4yNzYtMy41NjRoLTQuMTc5djE2LjE3Mmg0LjE3OVYxMy42NjR6bTMuOTg4IDE2LjE3MlYxMy42NjRoNC4xODVsNy43MDQgOS44ODh2LTkuODg4aDQuMTg2djE2LjE3MmgtNC4xODZMNDkuNTMgMTkuOTR2OS44OTZoLTQuMTg1em0yOS4yMjEtMTIuNjA4aC00Ljk4djIuNjkySDc0LjN2My41NjRoLTQuNzE1djIuNzg3aDQuOTh2My41NjVoLTkuMTU4VjEzLjY2NGg5LjE1OHYzLjU2NHpNMzMuNTcgNDguODIybC0xLjgxNC01LjIzNC0xLjc2NyA1LjIzNGgzLjU4em0xLjExNCAzLjIwM2gtNS44NWwtMS4wODcgMi43MTloLTQuNDIzbDYuMTktMTYuMTcyaDQuNTY1bDYuMDY3IDE2LjE3MmgtNC40N2wtLjk5Mi0yLjcyeiIgZmlsbD0iIzE4MTkxOSIvPjxtYXNrIGlkPSJhIiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc1IiBoZWlnaHQ9IjgwIj48cGF0aCBkPSJNNzUgMEgwdjgwaDc1VjB6IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGQ9Ik00Ni43OTggNDUuODE2aC43OTVjLjYyNSAwIDEuNTIxLS4xNyAyLjAzMS0uNjU0LjMxMy0uMzEzLjUzLS44NDUuNTMtMS4zNTYgMC0uNDg0LS4xOS0xLjAyMi0uNTU3LTEuMzU2LS4zODctLjM4OS0xLjA4Ny0uNjI3LTIuMDA0LS42MjdoLS43OTV2My45OTN6bTIuMzM3LTcuMjVjMS4yMSAwIDIuNzU4LjE5NyAzLjk0IDEuNDMuOTE4Ljk0OCAxLjM4IDIuMzUyIDEuMzggMy42NCAwIDEuMzgzLS40ODMgMi41OTYtMS4yODQgMy4zNjYtLjYyNi42MDctMS40NzUuOTY4LTIuMjIyIDEuMTE4bDUuMDU1IDYuNjE3aC01LjE5OGwtNC4wMTUtNi4yMDh2Ni4yMDhoLTQuMTc4VjM4LjU2NWg2LjUyMnoiIGZpbGw9IiMxODE5MTkiLz48L2c+PHBhdGggZD0iTTYzLjgzIDQyLjEzdjEyLjYwN2gtNC4xNzhWNDIuMTNoLTMuNDF2LTMuNTY1aDExLjA3NHYzLjU2NUg2My44M3oiIGZpbGw9IiMxODE5MTkiLz48bWFzayBpZD0iYiIgc3R5bGU9Im1hc2stdHlwZTpsdW1pbmFuY2UiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSI3NSIgaGVpZ2h0PSI4MCI+PHBhdGggZD0iTTc1IDBIMHY4MGg3NVYweiIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2IpIj48cGF0aCBkPSJNMjkuMDMxIDc2LjM2OGguOTQ1YzEuMTYxIDAgMi4xMjYtLjEyMyAyLjU4OC0uNjU1LjE5LS4yMTguMzQtLjU3OS4zNC0xLjA0MiAwLS41MTEtLjE3LS45Mi0uNDA4LTEuMTY2LS41MS0uNTEtMS41NDktLjUzMS0yLjU4OC0uNTMxaC0uODd2My4zOTRoLS4wMDd6bTAtNi41MjJoLjc3NWMuNDM0IDAgMS4xNjItLjA0OCAxLjU5Ni0uNTExLjI2NS0uMjY2LjM4OC0uNzAyLjM4OC0xLjA3IDAtLjQxLS4xNS0uODI1LS4zODgtMS4wOS0uMjY1LS4yNjYtLjc3NC0uNDg0LTEuNTk2LS40ODRoLS43NzV2My4xNTV6bS00LjE4NSA5Ljc5M1Y2My40NjdoNi4yMzdjMS4xNjIgMCAyLjU0MS4xNyAzLjUzMyAxLjI2LjU1Ny42MDcuOTkyIDEuNjAyLjk5MiAzLjAzMyAwIC43MDItLjEyMiAxLjMwOS0uNDYyIDEuOTktLjM0LjYyNy0uNy45OTUtMS4zMDUgMS4yNjEuODUuMDk2IDEuNjkyLjQ4NCAyLjIwMi45NjguNjUyLjYyNyAxLjA4NyAxLjY3IDEuMDg3IDIuOTU3IDAgMS41MjctLjU4NSAyLjU3LTEuMTgzIDMuMTc2LS44Ny44OTMtMi4zOTEgMS41MjctNC4zNzUgMS41MjdoLTYuNzI2eiIgZmlsbD0iIzE4MTkxOSIvPjwvZz48bWFzayBpZD0iYyIgc3R5bGU9Im1hc2stdHlwZTpsdW1pbmFuY2UiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSI3NSIgaGVpZ2h0PSI4MCI+PHBhdGggZD0iTTc1IDBIMHY4MGg3NVYweiIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2MpIj48cGF0aCBkPSJNNDUuMjk2IDY4LjQ2MmMtLjg3Ljg1Mi0xLjI4NCAyLjAzOC0xLjI4NCAzLjE3NiAwIDEuNDMxLjY4IDIuNDI2IDEuMjg0IDMuMDA1Ljc3NS43NSAxLjg2MiAxLjI4OCAzLjI2MSAxLjI4OCAxLjQyNyAwIDIuNDk0LS41MSAzLjI0MS0xLjI2Ljc0Ny0uNzUgMS4zMDUtMS44NjggMS4zMDUtMy4xMDEgMC0xLjI2LS41NTgtMi4zNzgtMS4zMDUtMy4xMDhhNC44MSA0LjgxIDAgMDAtMy4yNC0xLjI4OGMtMS4xNTYuMDA3LTIuMzkyLjQxNi0zLjI2MiAxLjI4OHptOS42MiA5LjE0QzUzLjI3NCA3OS4xNzQgNTAuOTU3IDgwIDQ4LjU1OCA4MGMtMi4zOTEgMC00LjcwOC0uODI1LTYuMzUyLTIuMzk5LTEuNzE5LTEuNjUtMi41NDEtMy45MDUtMi41NDEtNi4wMzggMC0yLjE2LjgyMi00LjQzNiAyLjU0LTYuMDY1IDEuNjQ1LTEuNTc0IDMuOTYyLTIuMzk5IDYuMzUzLTIuMzk5IDIuMzk5IDAgNC43MTUuODI1IDYuMzYgMi4zOTkgMS43MTkgMS42MjIgMi41MzQgMy45MDUgMi41MzQgNi4wNjUgMCAyLjE0LS44MTUgNC4zOTYtMi41MzQgNi4wMzh6IiBmaWxsPSIjMTgxOTE5Ii8+PC9nPjxwYXRoIGQ9Ik02OS4wMDggNjMuNDY3bC0yLjQ4NyA0LjE5OC0yLjM5OC00LjE5OGgtNS4xN2w1LjE3IDcuNTQ0LTYuMzEyIDguNjI4aDUuMDU1bDMuNjI4LTUuMjYxIDMuNDMgNS4yNkg3NWwtNi4wODgtOC42MjcgNS4yNDUtNy41NDRoLTUuMTV6IiBmaWxsPSIjMTgxOTE5Ii8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfMTJfOTczIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDc1djgwSDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+"
+                                alt="Производство упаковки" /> </a>
+                    </div>
+                    <div class="d-none d-lg-flex col-lg-2">
+                        <div class="change-city-location" data-toggle="modal" data-target=".modal-change-city-location">
+                            <i class="w2p-icon-pin2 w2p-size-20"></i><span class="city-location-name"
+                                data-toggle="tooltip" data-placement="bottom">не определен</span>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-flex col-auto">
+                        <div class="company-phone">
+                            <a href="tel:+7 (495) 215-09-77" class="company-phone-value h4">
+                                +7 (495) 215-09-77 &nbsp;
+                            </a>
+                            <div class="company-phone-label signature text-gray-600">По будням с 10 до 19 по МСК</div>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-flex align-items-center ml-auto">
+                        <div class="bootstrap-select user-select user-cabinet dropdown">
+                            <div class="dropdown-toggle d-flex align-items-center" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="w2p-icon-user5 w2p-size-24"></span>
+                                <span class="username">Михаил</span>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="/orders" class="dropdown-item">
+                                    Мои заказы </a>
+                                <a href="/profile" class="dropdown-item">
+                                    Мой профиль </a>
+                                <a href="/profile/editor/projects" class="dropdown-item">
+                                    Мои проекты </a>
+                                <a href="/backend" target="_blank" class="dropdown-item">
+                                    Админ-панель </a>
+                                <a href="/logout" class="dropdown-item">
+                                    Выйти </a>
+                            </div>
+                        </div>
+                        <span class="js-cart shopping-cart-icon" id="cart-widget">
+                            <a href="/cart" class="d-flex align-items-center">
+                                <i class="w2p-icon-cart w2p-size-24" title="Корзина"></i>
+                                <span class="cart-count count-shopping-cart-icon" style="display: none"></span>
+                            </a>
+                        </span>
+                    </div>
+
+                    <div class="col-auto d-flex d-lg-none align-items-center ml-auto pt-1">
+                        <a href="tel:+7 (495) 215-09-77" class="company-phone-value"><span
+                                class="d-block w2p-icon-phone2 w2p-size-40"></span></a>
+                        <div class="mobile-menu-icon">
+                            <span class="d-block w2p-icon-menu3 w2p-size-40"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div class=" menu-container">
+            <div class="main_menu ">
+                <div class="container">
+                    <div class="descktop_menu">
+                        <div class="cd-dropdown-wrapper">
+                            <ul class="cd-dropdown-wrapper-menu">
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="1" data-view-child-items="1" href="/produkciya"><span
+                                            class="cd-dropdown-trigger-text">ОНЛАЙН-ЗАКАЗ</span><span
+                                            class="w2p-icon-arrow-down cd-dropdown-trigger-arrow p-2"></span><span
+                                            class="w2p-icon-arrow-up cd-dropdown-trigger-arrow p-2"></span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="107" data-view-child-items="1" href="/projects-archive"><span
+                                            class="cd-dropdown-trigger-text">КАТАЛОГ УПАКОВКИ</span><span
+                                            class="w2p-icon-arrow-down cd-dropdown-trigger-arrow p-2"></span><span
+                                            class="w2p-icon-arrow-up cd-dropdown-trigger-arrow p-2"></span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="113" data-view-child-items="1" href="#"><span
+                                            class="cd-dropdown-trigger-text">УСЛУГИ</span><span
+                                            class="w2p-icon-arrow-down cd-dropdown-trigger-arrow p-2"></span><span
+                                            class="w2p-icon-arrow-up cd-dropdown-trigger-arrow p-2"></span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="256" data-view-child-items="1" href="/packaging-finish"><span
+                                            class="cd-dropdown-trigger-text">ПРЕМИУМ ОТДЕЛКА</span><span
+                                            class="w2p-icon-arrow-down cd-dropdown-trigger-arrow p-2"></span><span
+                                            class="w2p-icon-arrow-up cd-dropdown-trigger-arrow p-2"></span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="116" data-view-child-items="1" href="#"><span
+                                            class="cd-dropdown-trigger-text">ЗАКАЗЧИКАМ</span><span
+                                            class="w2p-icon-arrow-down cd-dropdown-trigger-arrow p-2"></span><span
+                                            class="w2p-icon-arrow-up cd-dropdown-trigger-arrow p-2"></span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="112" data-view-child-items="1" href="/our-equipment"><span
+                                            class="cd-dropdown-trigger-text">ТИПОГРАФИЯ</span><span
+                                            class="w2p-icon-arrow-down cd-dropdown-trigger-arrow p-2"></span><span
+                                            class="w2p-icon-arrow-up cd-dropdown-trigger-arrow p-2"></span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="117" data-view-child-items="" href="/blog"><span
+                                            class="cd-dropdown-trigger-text">БЛОГ</span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="253" data-view-child-items="" href="/contacts"><span
+                                            class="cd-dropdown-trigger-text">КОНТАКТЫ</span></a>
+                                </li>
+                                <li class="cd-dropdown-wrapper-li ">
+                                    <a class="cd-dropdown-trigger text-2 text-gray-700 text-gray-900-hover"
+                                        data-index="258" data-view-child-items=""
+                                        href="/application-for-calculation"><span
+                                            class="cd-dropdown-trigger-text">ОСТАВИТЬ ЗАЯВКУ НА РАСЧЕТ</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="megamenu-dropdown cd-dropdown-1">
+                        <div class="container">
+                            <div class="menu-content">
+                                <ul class="cd-dropdown-content menu-product-parent">
+                                    <li class="has-children">
+                                        <a href="/korobki-iz-kartona"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Коробки из картона</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul
+                                            class="cd-dropdown-under-child cd-dropdown-icons is-hidden menu-product-child">
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/cartoon-kryshka-dno"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/13362391315e58eb4179ca48.50767272.png"
+                                                        alt="Крышка-дно" class="menu-product-img" />
+                                                    <div>
+                                                        <span
+                                                            class="menu-product-name text-2 text-gray-900">Крышка-дно</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/cartoon-lastochkin-khvost"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/16441117275e58eb80259c21.21011882.png"
+                                                        alt="Коробка картонная " Ласточкин хвост""
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробка
+                                                            картонная "Ласточкин хвост"</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/cartoon-penal"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/11096055335e58ebb45b3ef6.98001514.png"
+                                                        alt="Коробка картонная " Пенал"" class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробка
+                                                            картонная "Пенал"</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/cartoon-monoblock"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/18624419105e58ebc06987e0.54054170.png"
+                                                        alt="Коробка картонная " Моноблок"" class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробка
+                                                            картонная "Моноблок"</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/cartoon-pirozok"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/10311201295e58ebcaa25019.80779302.png"
+                                                        alt="Коробка картонная " Пирожок"" class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробка
+                                                            картонная "Пирожок"</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/cartoon-klapan"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/6548444915e44ffb38462c3.57759434.jpg"
+                                                        alt="Коробка картонная, дно с клапаном"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробка
+                                                            картонная, дно с клапаном</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="/korobki-kashirovannye"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Кашированные коробки на заказ в Москве - производство
+                                                кашированных картонных упаковок</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul
+                                            class="cd-dropdown-under-child cd-dropdown-icons is-hidden menu-product-child">
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-kryshka-dno"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/6072914685e9dbe47691681.98445306.jpg"
+                                                        alt="" Крышка-дно" с печатным лайнером"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span
+                                                            class="menu-product-name text-2 text-gray-900">"Крышка-дно"
+                                                            с печатным лайнером</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-kryshka-dno-design"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/4443761065e592f3c9ccdb2.91257272.jpg"
+                                                        alt="" Крышка-дно" с лайнером из дизайнерской бумаги"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span
+                                                            class="menu-product-name text-2 text-gray-900">"Крышка-дно"
+                                                            с лайнером из дизайнерской бумаги</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-magnet-print"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/13353085535e92dc0a6dba97.61665066.png"
+                                                        alt="Коробки с магнитным клапаном (крышкой)"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробки с
+                                                            магнитным клапаном (крышкой)</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-magnet-print-euro"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/13353085535e92dc0a6dba97.61665066.png"
+                                                        alt="" Евро" с магнитным клапаном и печатным лайнером"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">"Евро" с
+                                                            магнитным клапаном и печатным лайнером</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-magnet-design"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/13353085535e92dc0a6dba97.61665066.png"
+                                                        alt="Коробки с магнитным клапаном и  лайнером из дизайнерской бумаги"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробки с
+                                                            магнитным клапаном и лайнером из дизайнерской бумаги</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-magnet-design-euro-paz"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/13353085535e92dc0a6dba97.61665066.png"
+                                                        alt="" Евро" с магнитным клапаном и лайнером из дизайнерской
+                                                        бумаги" class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">"Евро" с
+                                                            магнитным клапаном и лайнером из дизайнерской бумаги</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-penalclose-print"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/1845198145e9dd5986b52f7.33670357.jpg"
+                                                        alt="Коробки кашированные " Пенал закрытый" с печатным лайнером"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Коробки
+                                                            кашированные "Пенал закрытый" с печатным лайнером</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-penalopen-print"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/1845198145e9dd5986b52f7.33670357.jpg"
+                                                        alt="Пенал открытый с печатным лайнером"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Пенал
+                                                            открытый с печатным лайнером</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-penalclose-design"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/1845198145e9dd5986b52f7.33670357.jpg"
+                                                        alt="Пенал закрытый с лайнером из дизайнерской бумаги"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Пенал
+                                                            закрытый с лайнером из дизайнерской бумаги</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="cd-dropdown-item">
+                                                <a href="/produkciya/box-kash-penalopen-design"
+                                                    class="text-gray-600 text-gray-900-hover cd-dropdown-under-child-link menu-product">
+                                                    <img src="https://static.wow2print.com/storage/119/store/product/1845198145e9dd5986b52f7.33670357.jpg"
+                                                        alt="Пенал открытый с лайнером из дизайнерской бумаги"
+                                                        class="menu-product-img" />
+                                                    <div>
+                                                        <span class="menu-product-name text-2 text-gray-900">Пенал
+                                                            открытый с лайнером из дизайнерской бумаги</span>
+                                                        <p class="small-text menu-product-description"></p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="megamenu-dropdown cd-dropdown-107">
+                        <div class="container">
+                            <div class="menu-content">
+                                <ul class="cd-dropdown-content">
+                                    <li class="has-children"> <a href="/projects_category/the-purpose-of-the-packaging"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Назначение упаковки</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-the-banking-and-premium-cards">Для
+                                                    банковских и премиальных карт</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-gift-sets">Для подарочных карт и
+                                                    сертификатов</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-bottles">Для алкогольной продукции</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-jewelry">Для ювелирных изделий</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-cosmetics-and-perfumes">Для косметики и
+                                                    парфюмерии</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-galant">Для галантерейной продукции</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-medicine-and-pharmaceuticals">Для
+                                                    медицины и фармацевтики</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-confectionery">Для кондитерских
+                                                    изделий</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-sweets">Для шоколадных конфет</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/upakovka-dlya-podarochnyh-naborov">Для подарочных наборов</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/tea-cofe">Для чая и кофе</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-corporate-gifts">Для корпоративных
+                                                    подарков</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-souvenirs">Для сувениров</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-hours-and-premium-products">Для часов и
+                                                    наградной продукции</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-electronics-and-gadgets">Для
+                                                    электроники и гаджетов</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-product-samples">Для образцов
+                                                    продукции</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/dlya-b-yuti-boksov">Для бьюти боксов</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-books-and-cds">Для книг и дисков</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-flash-drives">Для флешек</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-business">Для бизнеса</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-new-year-gifts">Для новогодних
+                                                    подарков</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-chocolate">Для шоколада</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/universal-packaging">Универсальная
+                                                    упаковка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/for-sports-clubs">Для спортивных
+                                                    организаций и клубов</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/korobki-dlja-juvelirnyh-ukrashenij">Для
+                                                    ювелирных украшений</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/korobki-dlja-podarkov">Для подарков</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/korobki-dlja-lekarstv">Для лекарств</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/izgotovlenie-korobok-dlja-konfet">Для
+                                                    конфет</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/kartonnaja-upakovka-dlja-butylok">Для
+                                                    бутылок</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/korobki-dlja-igrushek">Для игрушек</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/korobki-dlja-velkom-pak">Welcome pack</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/projects_category/type-of-lodgement"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Тип ложемента</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-design-of-the-carton">Ложемент
+                                                    из дизайнерского картона</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-of-izolon">Ложемент из
+                                                    изолона</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-of-mgk">Ложемент из МГК
+                                                    (микрогофрокартона)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-of-foam-rubber">Ложемент из
+                                                    поролона</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-of-eva">Ложемент из ЭВА
+                                                    (вспененой резины)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-cardboard">Ложемент
+                                                    картонный</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-with-the-drapery-fabric">Ложемент
+                                                    с драпировкой тканью</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/a-flocked-lodgment">Ложемент
+                                                    флокированный</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-cradle-of-kappa">Ложемент из
+                                                    переплетного картона</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/projects_category/type-of-packing"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Тип упаковки</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/cardboard-boxes">Картонная упаковка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/laminated-boxes">Кашированная упаковка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-of-mgk">Упаковка из МГК</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/cardboard-box-with-double-sides">Картонная
+                                                    коробка с двойными бортами</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-cover-bottom-cardboard">Коробка
+                                                    крышка-дно (картонная)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-cover-bottom-laminated">Коробка
+                                                    крышка-дно (кашированная)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-lid-bottom-with-inner-board">Коробка
+                                                    крышка-дно с внутренним бортом</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-magnetic-box-cardboard">Коробка на
+                                                    магните (картонная)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-on-the-magnet-laminated">Коробка на
+                                                    магните (кашированная)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-pencil-box">Коробка-пенал</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-transformer">Коробка-трансформер</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-suitcase">Коробка-чемодан</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/box-box-laminated">Коробка-шкатулка
+                                                    (кашированная)</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/with-window">С окном</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/with-a-shell">С обечайкой</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/handbag">Сумочка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/kofr">Кофр</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/self-assembled">Самосборная</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/packaging-with-logo">С логотипом</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/luxury-packaging">Элитная</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/branded-boxes">Брендированная</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/projects_category/packing-form"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Форма упаковки</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/square">Квадратная</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/rectangular">Прямоугольная</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/projects_category/the-original-form">Оригинальная</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="/projects_category/pos-materials"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Материалы для мерчандайзинга</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/projects_category/packages"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Пакеты бумажные</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="megamenu-dropdown cd-dropdown-113">
+                        <div class="container">
+                            <div class="menu-content">
+                                <ul class="cd-dropdown-content">
+                                    <li class="has-children"> <a href="#"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Проектирование</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/on-designing/designing-of-packaging">Упаковки</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/on-designing/pos-mat-design">ПОС-материалов</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/on-designing/drawing-sample">Тиражный образец</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/design_and_layout"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Дизайн-студия</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/design_and_layout/graphic-design">Графический дизайн</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/design_and_layout/technical-design">Технический дизайн и
+                                                    верстка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/package_design.docx">Бриф на дизайн упаковки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/prepress"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Пре-пресс</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/prepress/personalization">Персонализация</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/technology-fineartbox/color-profile">Цветовой профиль</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/prepress/colorproof">Цветопроба</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/printing_service"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Печать</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/printing_service/cifrovaya-pechat">Цифровая печать</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/printing_service/ofsetnaya-pechat">Офсетная печать</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/printing_service/travaretnaya-pechat">Трафаретная печать</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/printing_service/uf-print">Широкоформатная</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/finish"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Послепечатная обработка</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/finish/lamination">Ламинирование</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/finish/excision">Высечка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/finish/embossing">Тиснение</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/finish/kashirovanie">Каширование</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/finish/cutting-on-a-plotter">Резка на плоттере</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="#"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Ручные операции</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/hand-work/assembling">Склейка и сборка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/hand-work/copying-and-delivery">Копакинг</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/hand-work/distribution">Адресная рассылка</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="megamenu-dropdown cd-dropdown-256">
+                        <div class="container">
+                            <div class="menu-content">
+                                <ul class="cd-dropdown-content">
+                                    <li> <a href="/mgi_techtreb.pdf"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Технические требования для 3D фольгирования и
+                                                лакирования</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="megamenu-dropdown cd-dropdown-116">
+                        <div class="container">
+                            <div class="menu-content">
+                                <ul class="cd-dropdown-content">
+                                    <li class="has-children"> <a href="/about-project"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">О типографии</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/about-project/about-us">О наших проектах</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/about-project/scheme-of-work">Схема работы</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/about-project/achievements">Наши достижения</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/about-project/partners">Партнеры</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="#"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Условия сервиса</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/term_of_use/contract">Договор и реквизиты</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/fab_dogovor-ofert-td.pdf">Договор оферты</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/term_of_use/quality-policy">Политика в области качества</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/term_of_use/payment">Оплата</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/term_of_use/delivery">Доставка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/application-for-calculation">Заявка на расчет</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="#"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Технологии FineArtBox</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/technology-fineartbox/technical-requirements">Требования к
+                                                    макетам</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/technology-fineartbox/printing-formats">Форматы печати</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="megamenu-dropdown cd-dropdown-112">
+                        <div class="container">
+                            <div class="menu-content">
+                                <ul class="cd-dropdown-content">
+                                    <li> <a href="/our-equipment/printing-equipment"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Печатное оборудование</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/our-equipment/finishing-equipment"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Отделочное оборудование</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/our-equipment/binding-equipment"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Переплетное оборудование</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/our-equipment/packing-factory"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Упаковочное оборудование</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/paper-for-printing"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Дизайнерская бумага для цифровой печати</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/materials/special-papers"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Специальные материалы</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/sheet-material"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Листовые переплетные материалы</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/roll-materials"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Рулонные переплетные материалы</span>
+                                        </a>
+                                    </li>
+                                    <li> <a href="/materials/cardboard"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Виды переплетного картона</span>
+                                        </a>
+                                    </li>
+                                    <li class="has-children"> <a href="/materials/finish"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Отделка</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/packaging-finish">Премиум отделка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/materials/the-decor-and-fittings">Декор и фурнитура</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children"> <a href="/cutting-dies"
+                                            class="text-gray-700 text-gray-900-hover cd-dropdown-content-link d-flex align-items-center justify-content-between">
+                                            <span class="mr-2">Вырубные штампы</span>
+                                            <span class="w2p-icon-arrow-down text-gray-700"
+                                                style="transform: rotateZ(-90deg)"></span>
+                                        </a>
+                                        <ul class="cd-dropdown-under-child is-hidden">
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/cutting-dies/for-paper-bags">Пакеты</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/cutting-dies/st-pack">Упаковка</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/cutting-dies/st-pos">Материалы для мерчандайзинга</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-gray-600 company-color-text-hover cd-dropdown-under-child-link"
+                                                    href="/cutting-dies/st-other">Прочие штампы</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li class="active">Пустая страница</li>
+            </ul>
+        </div>
+        <div class="edit-model position-fixed">
+            <a href="/backend/page/page/editor/1365" target="_blank">
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="w2p-icon-settings w2p-size-18"></span>
+                    <div>Настройки</div>
+                </div>
+            </a>
+        </div>
+        <div class="heading-line">
+            <div class="container text-center">
+                <h1>Пустая страница</h1>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="content-html-source">
+                {% block page %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="hidden-xs" style="padding: 40px 0 40px 0; background-color: #ECECEE; margin-top: 32px;">
+        <noindex>
+            <div class="row" style="max-width: 1405px; margin: auto;">
+                <div class="fab-footer-block footer-left-block">
+                    <div class="footer-title" style="text-transform: uppercase;"><!--Подпишитесь на нашу рассылку-->
+                    </div>
+                    <div class="footer-content">
+                        <div>
+                            <div id="unisender-subscribe-form"
+                                data-url="https://cp.unisender.com/ru/v5/subscribe-form/view/6rynbi8j8jsrpcuz1emgtar5d1cgo1roj7g1mzre">
+                            </div>
+                            <script type="text/javascript"
+                                src="https://cp.unisender.com/v5/template-editor-new/js/app/preview/form/form-widget-loader.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="fab-footer-block">
+                    <div class="footer-title" style="text-transform: uppercase;">О проекте</div>
+                    <div class="footer-content">
+                        <p class="mb-2">Проект «FineArtBox» – команда профессионалов с 20 летним опытом и собственное
+                            современное предприятие с инновационными технологиями, способное качественно и оперативно
+                            выполнять сложные задачи в области полиграфии и производства подарочной и промышленной
+                            упаковки под заказ. Типография расположена в Москве, и вы всегда сможете контролировать на
+                            каждом этапе прохождение вашего заказа.<br>
+                            Наше предприятие оснащено парком печатного оборудования HP Indigo и специализированным
+                            оборудованием для выполнения отделочных работ для производства подарочной упаковки и коробок
+                            из картона, в том числе круглых коробок различных диаметров, пакетов и других рекламных
+                            материалов.</p>
+                        <p>2017-2023 © FineArtBox.ru | Все права защищены</p>
+                    </div>
+                </div>
+                <div class="fab-footer-block">
+                    <div class="footer-title" style="text-transform: uppercase;">Рубрики</div>
+                    <div class="footer-content">
+                        <div class="footer-content-item">
+                            <a href="/produkciya">Онлайн-заказ</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/projects-archive">Портфолио</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/printing_service">Услуги</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/packaging-finish">Премиум отделка</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/about-project">Заказчикам</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/our-equipment">Типография</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/blog">Блог</a>
+                        </div>
+                        <div class="footer-content-item">
+                            <a href="/contacts">Контакты</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="fab-footer-block">
+                    <div class="footer-title" style="text-transform: uppercase;">Контакты</div>
+                    <div class="footer-content">
+                        <div class="footer-content-item"><i class="w2p-icon-pin"></i><a
+                                href="https://yandex.ru/maps/-/CCU4rMgYsC" rel="nofollow" target="_blank">Адрес: 125252
+                                Москва ул.Зорге, д.15, корп.1, оф.404</a></div>
+                        <div class="footer-content-item d-block d-xl-flex"><i class="w2p-icon-whatsapp"></i>Телефон: <a
+                                href="tel:+7 (495) 215-09-77" style="white-space: nowrap;">+7 (495) 215-09-77</a></div>
+                        <div class="footer-content-item"><i class="w2p-icon-mail-ru" style="color: #666"></i><a
+                                href="mailto:sale@fineartbox.ru">sale@fineartbox.ru</a></div>
+                        <div class="footer-content-item"><i class="w2p-icon-clock"></i>Мы открыты: Пн-Пт: 10:00-19:00
+                        </div>
+                    </div>
+
+                    <div class="d-inline-block-wf" style="padding-bottom: 10px;">Мы в соц. сетях</div><br>
+                    <div class="fab-social-block d-inline-block-wf">
+                        <div class="fab-social-logo">
+                            <a target="_blank" href="https://vk.com/fineartbox"><i class="w2p-icon-footer-vk"
+                                    style="font-size: 46px; color: #242424;"></i></a>
+                            <a target="_blank" href="https://t.me/fineartbox"><i class="w2p-icon-footer-telegram"
+                                    style="font-size: 46px; color: #242424;"></i></a>
+                            <!--<a href="https://www.facebook.com/fineARTbox/" rel="nofollow noopener noreferrer">
+                            <img style="max-width: 60px;" src="/uploads/imagesContent/14445683655fbfccd912f868.49313723.png"></a>
+                        <a href="https://www.instagram.com/fineartbox/" rel="nofollow noopener noreferrer">
+                            <img style="max-width: 60px;" src="/uploads/imagesContent/19737024105fbfccd937f695.48901226.png"></a>
+                        <a href="https://t.me/fineartbox" rel="nofollow noopener noreferrer">
+                            <img style="max-width: 60px;" src="/uploads/imagesContent/19306459886228678c831c41.11359138.png"></a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </noindex>
+
+    <style>
+        .footer-title {
+            margin-bottom: 15px;
+        }
+
+        .footer-content-item {
+            margin: 20px 0;
+        }
+
+        .rubrics .footer-content-item {
+            margin: 10px 0;
+        }
+
+
+        .footer-content-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .footer-content-item i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .social-icons li {
+            display: inline;
+            padding: 15px;
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .fab-footer-block {
+            float: left;
+        }
+
+        .fab-footer-block {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .fab-payment {
+            text-align: right;
+        }
+
+        .fab-social {
+            padding-left: 30px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .fab-footer-block {
+                width: 25%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .fab-payment {
+                text-align: left;
+            }
+
+            .fab-social {
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .fab-footer-block {
+                width: 22%;
+                < !-- width: 25%;
+                -->
+            }
+
+            .footer-left-block {
+                width: 32%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .fab-footer-block {
+                width: 22%;
+                < !-- width: 25%;
+                -->
+            }
+
+            .footer-left-block {
+                width: 32%;
+            }
+        }
+
+        .d-inline-block {
+            display: inline-block;
+            float: left;
+        }
+
+        .fab-social-block {}
+
+        .fab-social-logo {
+            display: inline-block;
+        }
+
+        .fab-social-logo img {
+            max-width: 50px;
+            width: 100%;
+        }
+
+        .d-inline-block-wf {
+            display: inline-block;
+            float: none;
+        }
+
+        .sp-form {
+            margin: 0 0;
+        }
+    </style>
+    </div>
+
+    <style type="text/css">
+        .footer .social-image i {
+            font-size: 48px;
+            margin-right: 12px;
+        }
+    </style>
+    <div class="footer-developed-by-link">
+        <div class="container">
+            <div class="footer-developed-by">
+                <img style="float: right" src="https://fineartbox.ru/assets/1ffe2989/images/svg/tippo-logo.svg"
+                    alt="TCS" />
+                <div style="padding-top: 1px">
+                    Разработано </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.footer-developed-by-link').remove();
+            let html = `<div class="footer-developed-by-link">
+    <div class="container">
+        <div class="footer-developed-by">
+                            <img style="float: right" src="https://fineartbox.ru/assets/1ffe2989/images/svg/tippo-logo.svg" alt="TCS"/>
+                        <div style="padding-top: 1px">
+                Разработано            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+`;
+            setTimeout(function () {
+                if (!$('.footer-developed-by-link').length) {
+                    $('body').append(html);
+                }
+            }, 1);
+        });
+    </script>
+    <script>
+        $(function () {
+            window.layoutSizeLimit = 100;
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://fineartbox.ru/5d933314b12c4.css">
+    <script src="https://fineartbox.ru/files/portfolio-script.js"></script>
+    <script src="https://fineartbox.ru/5daeba809fc72.js"></script>
+    <script>
+        $('#carousel-1').addClass('container-fluid');
+        $('#carousel-1').css('max-width', '1405px');
+    </script>
+    <!-- BEGIN BITRIX24 WIDGET INTEGRATION WITH ROISTAT -->
+    <script>
+        (function (w, d, s, h) {
+            w.roistatLanguage = '';
+            var p = d.location.protocol == "https:" ? "https://" : "http://";
+            var u = "/static/marketplace/Bitrix24Widget/script.js";
+            var js = d.createElement(s); js.async = 1; js.src = p + h + u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+        })(window, document, 'script', 'cloud.roistat.com');
+    </script>
+    <!-- END BITRIX24 WIDGET INTEGRATION WITH ROISTAT -->
+    <script type="text/javascript">
+        window.addEventListener('onBitrixLiveChat', function (e) {
+            var widget = e.detail.widget;
+            // 1. Событие
+            widget.subscribe({
+                type: BX.LiveChatWidget.SubscriptionType.sessionStart,
+                callback: function (data) {
+                    // Метка
+                    ym(44072799, 'reachGoal', 'write-to-chat');
+                    gtag('event', 'sessionStart', { 'event_category': 'bx24chat' });
+                }
+            });
+        });
+    </script>
+    <style>
+        @media (max-width: 788px) {
+            .filter-tags {
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow-x: initial;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            if (typeof ym !== 'undefined') {
+                $('.cart-item-image-upload').click(function () {
+                    ym(44072799, 'reachGoal', 'download');
+                    return true;
+                });
+                $('.shopping-cart-icon').click(function () {
+                    ym(44072799, 'reachGoal', 'basket-icon');
+                    return true;
+                });
+                $('.login-client-icon').click(function () {
+                    ym(44072799, 'reachGoal', 'login');
+                    return true;
+                });
+                $('.cd-dropdown-wrapper-menu .menu-item-design').click(function () {
+                    ym(44072799, 'reachGoal', 'menu-design');
+                    return true;
+                });
+                $('.btn-add-product-cart').click(function () {
+                    ym(44072799, 'reachGoal', 'add-basket');
+                    return true;
+                });
+                $('#create-order-button').click(function () {
+                    ym(44072799, 'reachGoal', 'checkout');
+                    return true;
+                });
+            }
+        });
+    </script>
+    <div class="modal fade modal-change-city-location" style="z-index: 9999">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title h3">Выберите город</div>
+
+                    <div class="country-select-container d-none">
+                        <label class="country-select-label">Выберите страну</label>
+                        <select class="form-control selectpicker country-select" name="country_id" id="country_id">
+                            <option value="1">Россия</option>
+                        </select>
+                    </div>
+
+                    <div class="city-search-container">
+                        <input type="text" class="form-control city-search-field" placeholder="Поиск">
+                        <div class="city-search-result" style="display: none"></div>
+                    </div>
+
+                    <div class="city-container-wrapper">
+                        <div class="city-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.modal-change-city-location .city-container, .modal-change-city-location .city-search-result').on('click', '.select-city', function () {
+                let countryLocation = $('.modal-change-city-location select.country-select').val();
+                let index = $(this).attr('data-city');
+
+                // Удалить в начала 2024 года.
+                setCookie('cityLocationId', index, { expires: 1 });
+                setCookie('countryLocationId', countryLocation, { expires: 1 });
+                //
+
+                setCookie('cityLocationId', index, { expires: 3600 * 24 * 30, domain: true });
+                setCookie('countryLocationId', countryLocation, { expires: 3600 * 24 * 30, domain: true });
+
+                let modal = $('.modal-change-city-location');
+                if (!modal.attr('data-not-reload')) {
+                    location.reload();
+                }
+                modal.modal('hide');
+                let city = $(this).html();
+                $('.city-location-name').html(city);
+                $('.address-country').val(countryLocation);
+                $('.address-city').val(city);
+                $('.address-label').html(city);
+            });
+        })
+    </script>
+    <div class="mark-element"></div>
+    <script type="text/javascript" src="https://fineartbox.ru/js/5.1.0.9/11c990f963444c1d398542c88a99c4ef.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
+
 </html>
-<!--#include virtual="/parts/navbar.html" -->
