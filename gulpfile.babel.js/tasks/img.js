@@ -21,9 +21,9 @@ export default () => {
       .pipe(gp.newer(path.img.dest))
       .pipe(gp.webp())
       .pipe(gulp.dest(path.img.dest))
-      .pipe(gulp.src(path.img.src))
-      .pipe(gp.newer(path.img.dest))
-      .pipe(gulpif(app.isProd, gp.imagemin(app.imagemin)))
-      .pipe(gulp.dest(path.img.dest))
+      // .pipe(gulp.src(path.img.src))
+      // .pipe(gp.newer(path.img.dest))
+      // .pipe(gulpif(app.isProd, gp.imagemin(app.imagemin)))
+      // .pipe(gulp.dest(path.img.dest))
       .pipe(gp.size({title: "After images compressed"}));
 }
