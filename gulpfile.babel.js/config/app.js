@@ -1,4 +1,4 @@
-import data from "../../src/data/news.json";
+import data from "../../src/data/indexSlider.json";
 
 const isProd = process.argv.includes("--production"),
       isDev = !isProd

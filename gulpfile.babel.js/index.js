@@ -27,7 +27,7 @@ const watcher = () => {
 // Build
 const build = gulp.series(
    clear,
-   gulp.parallel(twig, scss, js, img, font),
+   gulp.parallel(twig, scss, js, font),
    inlineStyle
 );
 
