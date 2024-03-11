@@ -1,0 +1,13 @@
+<header class="mpp-main-menu">
+    <nav class="mpp-main-menu-wrapper container">
+        <ul class="mpp-main-menu-list-lvl-1">
+            {% for item in mainMenu %}
+                <li class="mpp-main-menu-item-lvl-1">
+                    <a href="{{ item.link }}">
+                        {{ item.label }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

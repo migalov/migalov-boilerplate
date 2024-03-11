@@ -1,0 +1,18 @@
+<section class="mpp-features">
+    <div class="container">
+        <h2>Что нас отличает?</h2>
+        <ul class="mpp-features-grid">
+            {% for item in features %}
+                <li>
+                    <img src="{{ item.src }}" />
+                    <div class="mpp-feature-body">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.desc }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    
+</section>

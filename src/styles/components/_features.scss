@@ -1,0 +1,51 @@
+.mpp-features {
+    padding: 2em 0;
+    background-color: #F8714C;
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 0 0 .5em;
+    }
+
+}
+
+.mpp-features-grid {
+    display: flex;
+    gap: 2em;
+
+
+
+    & li {
+        flex: 1;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+        outline: 1px solid rgba(0,0,0,0);
+        transition: ease .5s;
+        &:hover {
+            outline: 1px solid #F8714C;
+        }
+    }
+
+    & img {
+        height: 125px;
+        object-fit: cover;
+    }
+
+    & h3 {
+        font-family: "Montserrat";
+        font-size: .75rem;
+        font-weight: 600;
+    }
+    & p {
+        font-size: .625rem;
+        line-height: 1.4;
+        margin: 0.6em 0 0 0;
+    }
+}
+
+.mpp-feature-body {
+    padding: 0.15em 0.5em 1em;
+}

@@ -1,0 +1,7 @@
+.mpp-widgets-columns {
+    display: flex;
+    gap: 1.5rem;
+    & > div {
+        flex: 1;
+    }
+}

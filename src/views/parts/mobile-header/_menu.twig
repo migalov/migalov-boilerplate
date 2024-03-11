@@ -1,0 +1,24 @@
+<nav class="mpp-main-mobile-menu">
+    <ul>
+        {% for index, item in mainMobileMenu %}
+            <li class="mpp-main-mobile-menu-item-lvl-1">
+                <a href="{{ item.link }}">{{ item.label }}</a>
+                {% if item.dropdown is defined %}
+                    <input id="dropdown-list-{{ index }}" class="mpp-main-mobile-toggle" type="checkbox" checked="checked" value="" />
+                    <label for="dropdown-list-{{ index }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <path d="M1 1L6 6L11 1" stroke="black" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                    <ul class="mpp-main-mobile-menu-list-lvl-2">
+                        {% for subitem in item.dropdown %}
+                            <li class="mpp-main-mobile-menu-item-lvl-2 ">
+                                <a href="{{ subitem.link }}">{{ subitem.label }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

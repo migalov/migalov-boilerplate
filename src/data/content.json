@@ -1,0 +1,233 @@
+
+[
+   {
+        "title": "Gulp and Twig",
+        "mainBanners": [
+            {
+                "label": "Закажи сейчас альбом&nbsp;«Моменты» по промокоду&nbsp;MOMENTS до 01.04.24 -20%",
+                "src": "https://static.wow2print.com/storage/445/content/image/167817576065e82207109464.37448003.webp",
+                "link": "#"
+            },
+            {
+                "label": "Закажи сейчас альбом&nbsp;«Моменты» по промокоду&nbsp;MOMENTS до 01.04.24 -20%",
+                "src": "https://static.wow2print.com/storage/445/content/image/167817576065e82207109464.37448003.webp",
+                "link": "#"
+            },
+            {
+                "label": "Закажи сейчас альбом&nbsp;«Моменты» по промокоду&nbsp;MOMENTS до 01.04.24 -20%",
+                "src": "https://static.wow2print.com/storage/445/content/image/167817576065e82207109464.37448003.webp",
+                "link": "#"
+            }
+        ],
+        "sideBanners": [
+            {
+                "content": "Соберем <strong>фотокнигу</strong> за вас <strong>от 950 ₽</strong>",
+                "src": "https://static.wow2print.com/storage/445/content/image/7314835765e8226323ebf2.06357888.webp",
+                "link": "#"
+            },
+            {
+                "content": "Электронный подарочный <strong>сертификат</strong> к любому событию 1000, 1500, 2000, 3000, 5000 ₽",
+                "src": "https://static.wow2print.com/storage/445/content/image/201082444565e8226367b950.06890329.webp",
+                "link": "#"
+            }
+        ],
+        "features": [
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/87496312565e85c9332a258.92960558.webp",
+                "title": "Собственное производство",
+                "desc": "Позволяет отследить каждый заказ и обеспечить гарантию качества"
+            },
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/169254364565e85c92cae597.40719138.webp",
+                "title": "Удобный онлайн-редактор",
+                "desc": "Позволяет отследить каждый заказ и обеспечить гарантию качества"
+            },
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/144868502765e85c928beec8.11689434.webp",
+                "title": "Автоматическая обработка",
+                "desc": "Автоматическая обработка фотографий перед печатью"
+            }
+            ,
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/110018494765e85c922dffb5.22312849.webp",
+                "title": "Срок изготовления от 1 дня",
+                "desc": "Срок изготовления от 1 дня. Тиражей - от 7 дней"
+            }
+            ,
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/211741448665e85c938b4611.25303169.webp",
+                "title": "Бесплатная доставка до ПВЗ",
+                "desc": "Доставка по всей России до пунктов выдачи СДЭК"
+            }
+        ],
+        "simpleSection": [
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/59471330665e881cc942ea5.07544289.webp",
+                "title": "Фотокнига за вас",
+                "desc": "<p>Если у вас нет времени самостоятельно создать фотокнигу в онлайн-редакторе, наши дизайнеры сделают за вас.</p><p>Воспользуйтесь услугой «Фотокнига за вас». Готовый макет от дизайнера будет в вашем личном кабинете, который можно сразу отправить в печать</p>"
+            },
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/105506053465e881cd0044c0.58081945.webp",
+                "title": "О сервисе МоифотоСтраницы",
+                "desc": "Бренд МоиФотоСтраницы - хранитель вашей ценной семейной и личной истории, созданной из моментов, которые делают вашу жизнь неповторимой.Задача сервиса МоиФотоСтраницы – сохранять моменты, впечатления, печатать фотоистории."
+            },
+            {
+                "src": "https://static.wow2print.com/storage/445/content/image/35351604665e881cc48faf2.12554708.webp",
+                "title": "Собирайте фотопродукты в мобильной версии",
+                "list": [
+                    "Экономьте время, получайте классный результат",
+                    "Понятный интерфейс, удобный конструктор",
+                    "Ваши проекты доступны в любой момент"
+                ]
+            }
+        ],
+        "mainMenu": [
+            {
+                "label": "Акции",
+                "link": "#"
+            },
+            {
+                "label": "Фотокниги",
+                "link": "#"
+            },
+            {
+                "label": "Выпускные",
+                "link": "#"
+            },
+            {
+                "label": "Календари",
+                "link": "#"
+            },
+            {
+                "label": "Печать фото",
+                "link": "#"
+            },
+            {
+                "label": "Сертификат",
+                "link": "#"
+            },
+            {
+                "label": "Магазин",
+                "link": "#"
+            },
+            {
+                "label": "Еще",
+                "link": "#"
+            }
+        ],
+        "mainMobileMenu": [
+            {
+                "label": "Соберем фотокнигу",
+                "link": "#"
+            },
+            {
+                "label": "Сертификат",
+                "link": "#"
+            },
+            {
+                "label": "Акции",
+                "link": "#"
+            },
+            {
+                "label": "Блог",
+                "link": "#"
+            },
+            {
+                "label": "О нас",
+                "link": "#"
+            },
+            {
+                "label": "Помощь",
+                "link": "#",
+                "dropdown": [
+                    {
+                        "label": "Стоимость доставки",
+                        "link": "#"
+                    },
+                    {
+                        "label": "FAQ",
+                        "link": "#"
+                    },
+                    {
+                        "label": "Договор оферты",
+                        "link": "#"
+                    }
+                ]
+            },
+            {
+                "label": "Доставка и оплата",
+                "link": "#"
+            },
+            {
+                "label": "Контакты",
+                "link": "#"
+            }
+        ],
+        "desktopMenuLeft": [
+            {
+                "label": "О нас",
+                "link": "#"
+            },
+            {
+                "label": "Помощь",
+                "link": "#",
+                "dropdown": [
+                    {
+                        "label": "Стоимость доставки",
+                        "link": "#"
+                    },
+                    {
+                        "label": "FAQ",
+                        "link": "#"
+                    },
+                    {
+                        "label": "Договор оферты",
+                        "link": "#"
+                    }
+                ]
+            },
+            {
+                "label": "Контакты",
+                "link": "#"
+            }
+        ],
+        "desktopMenuRight": [
+            {
+                "label": "Соберем фотокнигу",
+                "link": "#"
+            },
+            {
+                "label": "Партнерские программы",
+                "link": "#",
+                "dropdown": [
+                    {
+                        "label": "Музей шоколада и какао",
+                        "link": "#"
+                    },
+                    {
+                        "label": "Выставка Россия",
+                        "link": "#"
+                    },
+                    {
+                        "label": "Стать партнером",
+                        "link": "#"
+                    }
+                ]
+            },
+            {
+                "label": "Блог",
+                "link": "#"
+            }
+        ],
+        "desktopContacts": [
+            {
+                "label": "8 (800) 775 08 61",
+                "link": "tel:88007750861"
+            },
+            {
+                "label": "support@myphotopages.ru",
+                "link": "mailto:support@myphotopages.ru"
+            }
+        ]
+    }
+]

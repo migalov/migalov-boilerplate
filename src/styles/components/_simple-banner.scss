@@ -1,0 +1,10 @@
+.mpp-simple-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+
+    & p {
+        width: 80%;
+    }
+}

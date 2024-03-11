@@ -1,0 +1,42 @@
+<header class="mpp-header-desktop">
+    <nav class="mpp-header-desktop-wrap container">
+        <ul>
+            {% for item in desktopMenuLeft %}
+                <li>
+                    <a href="{{ item.link }}">{{ item.label }}</a>
+                    <ul>
+                    {% for subitem in item.dropdown is defined %}
+                        <li><a href="{{ subitem.link }}">{{ subitem.label }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for item in desktopMenuRight %}
+                <li>
+                    <a href="{{ item.link }}">{{ item.label }}</a>
+                    {% for subitem in item.dropdown is defined %}
+                        <li><a href="{{ subitem.link }}">{{ subitem.label }}</a></li>
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+        {% include '../icons/logo.twig' %}
+        <div>
+            <ul class="mpp-header-desktop-contacts">
+                {% for item in desktopContacts %}
+                    <li>
+                        <a href="{{ item.link }}">{{ item.label }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div>
+                <a href="/">Войти</a>
+                <a href="/cart">
+                    {% include '../icons/cart.twig' %}
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>

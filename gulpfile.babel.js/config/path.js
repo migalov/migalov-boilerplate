@@ -24,13 +24,17 @@ export default {
       dest: `${pathDest}/js`
    },
    img: {
-      src: `${pathSrc}/img/*.{jpg,jpeg,png,gif,svg}`,
+      src: `${pathSrc}/img/**/*.{jpg,jpeg,png,gif,svg}`,
       watch: `${pathSrc}/img/**/*.{jpg,jpeg,png,gif,svg}`,
-      dest: `${pathDest}/img`
+      dest: `${pathDest}/img/`
    },
    font: {
       src: `${pathSrc}/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
       watch: `${pathSrc}/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
       dest: `/fonts`
+   },
+   data: {
+      src: `${pathSrc}/data/**/*.json`,
+      watch: `${pathSrc}/data/**/*.json`
    }
 }
